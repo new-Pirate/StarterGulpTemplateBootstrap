@@ -24,6 +24,7 @@
 }
 
 
+
 /*==========  Mobile First  ==========*/
 
 // ≤576px
@@ -44,4 +45,9 @@
 // ≤1200px
 @include media-breakpoint-up(xl) {
 	
+}
+@mixin respondCustom($v1, $v2) {
+    @media (min-width: #{$v1}) and (max-width: #{$v2}) {
+        @content;
+    }
 }

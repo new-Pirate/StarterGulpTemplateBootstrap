@@ -1,10 +1,67 @@
 @import "vars";
 @import "fonts";
 @import "libs";
+@import "media";
 
+/* preHead */
 
+.preHead{
+    padding: 0 50px !important; 
+    height: 38px;
+    background-color: #f5f5f5;
+    font-family: $robotoRegular;
 
+    @include media-breakpoint-down(lg) {
+        font-size: 12px;
+        padding: 0 !important;
+    }
+    
+    @include media-breakpoint-down(sm) {
+        height: 60px;
+    }
 
+    p {
+        @include media-breakpoint-down(lg) {
+            margin: 0 5px;
+        }
+        
+    }
 
+    .unitWraper{
+        display: flex;
+        & > i{
+            margin-right: 5px;
+        }
+    }
 
-@import "media"; // Always at the end
+    .basketWrap {
+        background: -moz-linear-gradient(left, #0145fe 0%, #c402ec 100%);
+        background: -webkit-linear-gradient(left, #0145fe 0%,#c402ec 100%);
+        background: linear-gradient(to right, #0145fe 0%,#c402ec 100%);
+        width: 180px;
+        padding: 14px;
+        top: -18px;
+        right: 10px;
+        font-family: $robotoLight;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        color: #fff;
+        border-radius: 0 0 8px 8px;
+
+        span {
+            background:url("../img/basket_inner.png") no-repeat center;
+            width: 29px;
+            height: 22px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 22px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            top: -58px;
+        }
+    }
+}
